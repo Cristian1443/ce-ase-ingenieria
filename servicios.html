@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - CE ASE INGENIERIA | Soluciones Tecnológicas Integrales</title>
+    <meta name="description" content="Servicios especializados en tecnología: servicio técnico, aires acondicionados, sistemas biométricos, video-seguridad, sistemas POS y cableado estructurado en Bogotá.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        .services-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .services-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+        .services-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .service-detail-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        .service-detail-section:nth-child(even) {
+            background: var(--light-blue-bg);
+        }
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .service-detail:nth-child(even) .service-content {
+            order: 2;
+        }
+        .service-detail:nth-child(even) .service-image {
+            order: 1;
+        }
+        .service-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+        .service-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+        }
+        .service-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .service-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        .service-features li i {
+            color: var(--success-green);
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-text) 0%, var(--primary-blue-dark) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+        @media (max-width: 768px) {
+            .services-hero h1 { font-size: 2.5rem; }
+            .services-hero p { font-size: 1.1rem; }
+            .service-detail { grid-template-columns: 1fr; gap: 40px; }
+            .service-detail:nth-child(even) .service-content,
+            .service-detail:nth-child(even) .service-image { order: unset; }
+            .service-content h2 { font-size: 2rem; }
+            .service-image img { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/573005874684?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+    </a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content nav-redesign">
+            <div class="header-left">
+                <div class="logo-section">
+                    <img src="img/logo-cease.png" alt="CE ASE INGENIERIA Logo" class="logo">
+                    <div class="logo-text">
+                        <span class="company-name">CE ASE INGENIERIA</span>
+                        <span class="slogan">Tecnología a tu alcance</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
+                    <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="index.html#brands" class="nav-link">Marcas</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container services-hero-content">
+            <h1>Nuestros Servicios</h1>
+            <p>Soluciones tecnológicas integrales para empresas y hogares con más de 10 años de experiencia</p>
+            <a href="contacto.html" class="btn btn-whatsapp btn-hero">
+                <i class="fas fa-phone-alt"></i>
+                <span>Solicita una Cotización</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <main>
+        <!-- Servicio Técnico -->
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-image">
+                        <img src="asset/img/computadores/servicio-tecnico.jpg" alt="Servicio Técnico Especializado">
+                    </div>
+                    <div class="service-content">
+                        <h2><i class="fas fa-laptop-code"></i> Servicio Técnico Especializado</h2>
+                        <p>Diagnóstico, reparación y mantenimiento preventivo de equipos tecnológicos. Nuestro equipo de técnicos certificados garantiza la máxima eficiencia de tus dispositivos.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Diagnóstico gratuito y rápido</li>
+                            <li><i class="fas fa-check-circle"></i> Reparación de computadores y laptops</li>
+                            <li><i class="fas fa-check-circle"></i> Mantenimiento preventivo</li>
+                            <li><i class="fas fa-check-circle"></i> Limpieza interna y externa</li>
+                            <li><i class="fas fa-check-circle"></i> Instalación de software y actualizaciones</li>
+                            <li><i class="fas fa-check-circle"></i> Garantía en todos los trabajos</li>
+                        </ul>
+                        <a href="https://wa.me/573005874684?text=Hola,%20necesito%20servicio%20técnico%20especializado." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Solicitar Servicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aires Acondicionados -->
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-image">
+                        <img src="asset/img/computadores/aires-acondicionados.jpg" alt="Aires Acondicionados">
+                    </div>
+                    <div class="service-content">
+                        <h2><i class="fas fa-snowflake"></i> Aires Acondicionados</h2>
+                        <p>Instalación, mantenimiento y reparación de sistemas de climatización para hogares y empresas. Trabajamos con las mejores marcas del mercado.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Instalación profesional</li>
+                            <li><i class="fas fa-check-circle"></i> Mantenimiento preventivo y correctivo</li>
+                            <li><i class="fas fa-check-circle"></i> Recarga de gas refrigerante</li>
+                            <li><i class="fas fa-check-circle"></i> Limpieza de filtros y serpentines</li>
+                            <li><i class="fas fa-check-circle"></i> Venta de equipos nuevos</li>
+                            <li><i class="fas fa-check-circle"></i> Garantía en instalaciones</li>
+                        </ul>
+                        <a href="https://wa.me/573005874684?text=Hola,%20necesito%20servicio%20de%20aires%20acondicionados." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Solicitar Servicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sistemas Biométricos -->
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-image">
+                        <img src="asset/img/computadores/sistemas-biometricos.jpg" alt="Sistemas Biométricos">
+                    </div>
+                    <div class="service-content">
+                        <h2><i class="fas fa-fingerprint"></i> Sistemas Biométricos</h2>
+                        <p>Implementación de sistemas de control de acceso biométrico para empresas. Seguridad avanzada con tecnología de reconocimiento facial y huella dactilar.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Control de acceso por huella</li>
+                            <li><i class="fas fa-check-circle"></i> Reconocimiento facial</li>
+                            <li><i class="fas fa-check-circle"></i> Control de asistencia</li>
+                            <li><i class="fas fa-check-circle"></i> Reportes detallados</li>
+                            <li><i class="fas fa-check-circle"></i> Integración con nómina</li>
+                            <li><i class="fas fa-check-circle"></i> Soporte técnico 24/7</li>
+                        </ul>
+                        <a href="https://wa.me/573005874684?text=Hola,%20me%20interesan%20los%20sistemas%20biométricos." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Solicitar Información
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video-Seguridad -->
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-image">
+                        <img src="asset/img/computadores/video-seguridad.jpg" alt="Video-Seguridad">
+                    </div>
+                    <div class="service-content">
+                        <h2><i class="fas fa-video"></i> Video-Seguridad CCTV</h2>
+                        <p>Sistemas de videovigilancia profesional con cámaras IP de alta definición. Monitoreo remoto 24/7 para proteger tu negocio o hogar.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Cámaras IP Full HD y 4K</li>
+                            <li><i class="fas fa-check-circle"></i> Grabación en la nube</li>
+                            <li><i class="fas fa-check-circle"></i> Monitoreo remoto desde celular</li>
+                            <li><i class="fas fa-check-circle"></i> Detección de movimiento</li>
+                            <li><i class="fas fa-check-circle"></i> Visión nocturna</li>
+                            <li><i class="fas fa-check-circle"></i> Instalación profesional</li>
+                        </ul>
+                        <a href="https://wa.me/573005874684?text=Hola,%20necesito%20un%20sistema%20de%20video-seguridad." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Solicitar Cotización
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sistemas POS -->
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-image">
+                        <img src="asset/img/computadores/sistemas-pos.jpg" alt="Sistemas POS">
+                    </div>
+                    <div class="service-content">
+                        <h2><i class="fas fa-cash-register"></i> Sistemas POS</h2>
+                        <p>Soluciones completas de punto de venta para restaurantes, tiendas y negocios. Integración con facturación electrónica y control de inventarios.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Software de facturación</li>
+                            <li><i class="fas fa-check-circle"></i> Control de inventarios</li>
+                            <li><i class="fas fa-check-circle"></i> Reportes de ventas</li>
+                            <li><i class="fas fa-check-circle"></i> Impresoras térmicas</li>
+                            <li><i class="fas fa-check-circle"></i> Cajones monederos</li>
+                            <li><i class="fas fa-check-circle"></i> Capacitación incluida</li>
+                        </ul>
+                        <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20un%20sistema%20POS." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Solicitar Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cableado Estructurado -->
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="service-detail">
+                    <div class="service-image">
+                        <img src="asset/img/computadores/cableado-estructurado.jpg" alt="Cableado Estructurado">
+                    </div>
+                    <div class="service-content">
+                        <h2><i class="fas fa-network-wired"></i> Cableado Estructurado</h2>
+                        <p>Diseño e implementación de infraestructura de red empresarial. Cableado categoría 6 y fibra óptica para máximo rendimiento.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Cableado Cat 6 y Cat 6A</li>
+                            <li><i class="fas fa-check-circle"></i> Fibra óptica</li>
+                            <li><i class="fas fa-check-circle"></i> Racks y gabinetes</li>
+                            <li><i class="fas fa-check-circle"></i> Certificación de red</li>
+                            <li><i class="fas fa-check-circle"></i> Puntos de red</li>
+                            <li><i class="fas fa-check-circle"></i> Documentación técnica</li>
+                        </ul>
+                        <a href="https://wa.me/573005874684?text=Hola,%20necesito%20cableado%20estructurado." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Solicitar Presupuesto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>¿Listo para transformar tu tecnología?</h2>
+                <p>Contáctanos hoy y recibe una consultoría gratuita personalizada</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/573005874684?text=Hola,%20quiero%20una%20consultoría%20gratuita." class="btn btn-whatsapp btn-hero" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultoría Gratuita
+                    </a>
+                    <a href="contacto.html" class="btn btn-secondary btn-hero">
+                        <i class="fas fa-envelope"></i> Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="img/logo-cease-white.png" alt="CE ASE INGENIERIA Logo Blanco" class="logo-footer">
+                <h3>CE ASE INGENIERIA</h3>
+                <p class="slogan-footer">Tecnología a tu alcance</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> 601-2520044</li>
+                    <li><i class="fas fa-mobile-alt"></i> 3005874684</li>
+                    <li><i class="fas fa-envelope"></i> comercialj@ceaseingenieria.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/573005874684" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 CE ASE INGENIERIA. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
