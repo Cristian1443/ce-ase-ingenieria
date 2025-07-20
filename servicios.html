@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .services-hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, #1e40af 100%);
             color: white;
-            padding: 100px 0 80px;
+            padding: 120px 0 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: calc(100vh - 70px);
+            display: flex;
+            align-items: center;
         }
         .services-hero::before {
             content: '';
@@ -24,25 +27,44 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            background: linear-gradient(135deg, rgba(37, 100, 235, 0.173), rgba(29, 79, 216, 0.216), rgba(30, 64, 175, 0.151));
+            z-index: 1;
+        }
+        .services-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 2px, transparent 2px),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 2px, transparent 2px),
+                linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.02) 50%, transparent 70%);
+            background-size: 50px 50px, 50px 50px, 100% 100%;
+            z-index: 1;
         }
         .services-hero-content {
             position: relative;
             z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         .services-hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 8vw, 4rem);
             margin-bottom: 1.5rem;
             font-weight: 800;
+            line-height: 1.2;
         }
         .services-hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: rgba(255,255,255,0.9);
-            max-width: 600px;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.95);
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
         .service-detail-section {
             padding: 100px 0;
@@ -120,14 +142,68 @@
             margin-bottom: 2.5rem;
             color: rgba(255,255,255,0.9);
         }
-        @media (max-width: 768px) {
-            .services-hero h1 { font-size: 2.5rem; }
-            .services-hero p { font-size: 1.1rem; }
+        @media (max-width: 900px) {
+            .services-hero {
+                padding: 80px 0 60px;
+                min-height: calc(100vh - 70px);
+            }
+            .services-hero h1 { 
+                font-size: clamp(2.2rem, 8vw, 3.5rem); 
+                margin-bottom: 1.2rem;
+            }
+            .services-hero p { 
+                font-size: clamp(1rem, 4vw, 1.3rem); 
+                margin-bottom: 2rem;
+            }
             .service-detail { grid-template-columns: 1fr; gap: 40px; }
             .service-detail:nth-child(even) .service-content,
             .service-detail:nth-child(even) .service-image { order: unset; }
             .service-content h2 { font-size: 2rem; }
             .service-image img { height: 300px; }
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero {
+                padding: 60px 0 50px;
+                min-height: calc(100vh - 70px);
+            }
+            .services-hero h1 { 
+                font-size: clamp(2rem, 7vw, 3rem); 
+                margin-bottom: 1rem;
+            }
+            .services-hero p { 
+                font-size: clamp(0.95rem, 3.5vw, 1.2rem); 
+                margin-bottom: 1.8rem;
+            }
+            .service-detail { grid-template-columns: 1fr; gap: 35px; }
+            .service-detail:nth-child(even) .service-content,
+            .service-detail:nth-child(even) .service-image { order: unset; }
+            .service-content h2 { font-size: 1.8rem; }
+            .service-image img { height: 280px; }
+        }
+        
+        @media (max-width: 600px) {
+            .services-hero {
+                padding: 50px 0 40px;
+                min-height: calc(100vh - 70px);
+            }
+            .services-hero h1 { 
+                font-size: clamp(1.8rem, 9vw, 2.5rem); 
+                margin-bottom: 1rem;
+                line-height: 1.2;
+            }
+            .services-hero p { 
+                font-size: clamp(0.9rem, 4vw, 1.1rem); 
+                margin-bottom: 1.5rem;
+            }
+            .services-hero-content {
+                padding: 0 15px;
+            }
+            .service-detail { grid-template-columns: 1fr; gap: 30px; }
+            .service-detail:nth-child(even) .service-content,
+            .service-detail:nth-child(even) .service-image { order: unset; }
+            .service-content h2 { font-size: 1.6rem; }
+            .service-image img { height: 250px; }
         }
     </style>
 </head>
@@ -172,7 +248,7 @@
         <div class="container services-hero-content">
             <h1>Nuestros Servicios</h1>
             <p>Soluciones tecnológicas integrales para empresas y hogares con más de 10 años de experiencia</p>
-            <a href="contacto.html" class="btn btn-whatsapp btn-hero">
+            <a href="contacto.html" class="btn btn-whatsapp btn-hero" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);">
                 <i class="fas fa-phone-alt"></i>
                 <span>Solicita una Cotización</span>
             </a>
