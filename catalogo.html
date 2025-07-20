@@ -21,6 +21,16 @@
             align-items: center;
         }
 
+        .catalog-hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
         .catalog-hero::before {
             content: '';
             position: absolute;
@@ -28,23 +38,24 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 2px, transparent 2px),
-                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1) 3px, transparent 3px),
-                linear-gradient(45deg, transparent 20%, rgba(255,255,255,0.03) 50%, transparent 80%);
-            background-size: 80px 80px, 120px 120px, 200px 200px;
-            animation: catalogPattern 25s linear infinite;
-            z-index: 1;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.85), rgba(29, 78, 216, 0.8), rgba(30, 64, 175, 0.75));
+            z-index: 2;
         }
 
-        @keyframes catalogPattern {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(80px, 80px) rotate(360deg); }
+        /* Video fallback para dispositivos que no soportan video */
+        @media (max-width: 768px) {
+            .catalog-hero-video {
+                display: none;
+            }
+            
+            .catalog-hero::before {
+                background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, #1e40af 100%);
+            }
         }
 
         .catalog-hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             text-align: center;
         }
 
@@ -495,6 +506,9 @@
 
     <!-- Hero Section -->
     <section class="catalog-hero">
+        <video class="catalog-hero-video" autoplay muted loop playsinline>
+            <source src="asset/video/Video_Background_Generation_Request.mp4?v=1" type="video/mp4">
+        </video>
         <div class="container catalog-hero-content">
             <h1>Catálogo de Productos</h1>
             <p>Descubre nuestra amplia gama de equipos tecnológicos de alta calidad. Desde computadores hasta sistemas de seguridad, tenemos todo lo que necesitas para impulsar tu negocio.</p>

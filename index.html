@@ -65,6 +65,9 @@
     <!-- Hero Section Renovado -->
     <section id="hero" class="hero-section">
         <div class="hero-background">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="asset/video/Video_Background_Generation_Request.mp4?v=1" type="video/mp4">
+            </video>
             <div class="hero-overlay"></div>
             <div class="hero-pattern"></div>
         </div>
@@ -636,5 +639,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Force video load
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                video.load();
+                video.play().catch(e => console.log('Video autoplay prevented:', e));
+            }
+        });
+    </script>
 </body>
 </html>
