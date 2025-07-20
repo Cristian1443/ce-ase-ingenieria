@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos | CE ASE INGENIERIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        .catalog-section { margin-bottom: 60px; }
+        .catalog-section-title { font-size: 2rem; color: var(--primary-blue); font-weight: 800; margin-bottom: 18px; text-align: center; }
+        .catalog-products-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+        .catalog-product-card { background: #fff; border-radius: 14px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); width: 260px; display: flex; flex-direction: column; align-items: center; padding: 18px 12px 16px 12px; }
+        .catalog-product-card img { width: 100%; height: 120px; object-fit: contain; background: #f3f4f6; border-radius: 8px; margin-bottom: 12px; }
+        .catalog-product-card h4 { font-size: 1.08rem; color: var(--primary-blue); margin-bottom: 6px; text-align: center; }
+        .catalog-product-card p { font-size: 0.97rem; color: var(--medium-text); margin-bottom: 10px; text-align: center; }
+        .catalog-product-card .btn-whatsapp-product { width: 100%; justify-content: center; font-size: 0.98rem; padding: 8px 0; }
+        .catalog-back-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--primary-blue); color: #fff; border-radius: 8px; padding: 12px 24px; font-weight: 700; font-size: 1rem; margin: 30px auto 0 auto; text-decoration: none; transition: background 0.2s; border: none; cursor: pointer; }
+        .catalog-back-btn:hover { background: var(--primary-blue-dark); color: #fff; }
+        @media (max-width: 700px) { .catalog-products-grid { flex-direction: column; gap: 14px; } .catalog-product-card { width: 98%; max-width: 340px; margin: 0 auto; } .catalog-section-title { font-size: 1.2rem; } }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/573005874684?text=Hola,%20me%20gustaría%20más%20información%20sobre%20el%20catálogo." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+    </a>
+    <!-- Header propio -->
+    <header class="main-header">
+        <div class="container header-content nav-redesign">
+            <div class="header-left">
+                <div class="logo-section">
+                    <img src="img/logo-cease.png" alt="CE ASE INGENIERIA Logo" class="logo">
+                    <div class="logo-text">
+                        <span class="company-name">CE ASE INGENIERIA</span>
+                        <span class="slogan">Tecnología a tu alcance</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#services" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#products" class="nav-link">Productos</a></li>
+                    <li><a href="index.html#brands" class="nav-link">Marcas</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container" style="margin-top: 40px;">
+        <h1 class="section-title" style="text-align:center;">Catálogo de Productos</h1>
+        <!-- Hardware y Software -->
+        <section class="catalog-section">
+            <h2 class="catalog-section-title">Hardware y Software</h2>
+            <div class="catalog-products-grid">
+                <div class="catalog-product-card">
+                    <img src="img/producto-laptop.jpg" alt="Portátil Empresarial">
+                    <h4>Portátil Empresarial</h4>
+                    <p>Rendimiento y movilidad para oficina y teletrabajo.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20portátil%20empresarial." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-pc.jpg" alt="Computador de Escritorio">
+                    <h4>Computador de Escritorio</h4>
+                    <p>Equipos All in One y torres para empresas.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20computador%20de%20escritorio." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-impresora.jpg" alt="Impresora Multifuncional">
+                    <h4>Impresora Multifuncional</h4>
+                    <p>Impresión, escaneo y copiado eficiente.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20la%20impresora%20multifuncional." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-proyector.jpg" alt="VideoBeam / Proyector">
+                    <h4>VideoBeam / Proyector</h4>
+                    <p>Presentaciones y entretenimiento en alta definición.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20proyector." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+            </div>
+        </section>
+        <!-- Video-Seguridad -->
+        <section class="catalog-section">
+            <h2 class="catalog-section-title">Video-Seguridad</h2>
+            <div class="catalog-products-grid">
+                <div class="catalog-product-card">
+                    <img src="img/producto-camara-ip.jpg" alt="Cámara IP">
+                    <h4>Cámara IP</h4>
+                    <p>Vigilancia remota y grabación HD.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20la%20cámara%20IP." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-dvr.jpg" alt="Grabador DVR/NVR">
+                    <h4>Grabador DVR/NVR</h4>
+                    <p>Almacenamiento y gestión de video-seguridad.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20grabador%20DVR/NVR." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-kit-seguridad.jpg" alt="Kit de Seguridad">
+                    <h4>Kit de Seguridad</h4>
+                    <p>Solución integral: cámaras, grabador y accesorios.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20kit%20de%20seguridad." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+            </div>
+        </section>
+        <!-- Sistemas POS -->
+        <section class="catalog-section">
+            <h2 class="catalog-section-title">Sistemas POS</h2>
+            <div class="catalog-products-grid">
+                <div class="catalog-product-card">
+                    <img src="img/producto-pos.jpg" alt="Terminal POS">
+                    <h4>Terminal POS</h4>
+                    <p>Gestión de ventas y facturación eficiente.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20terminal%20POS." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-lector-codigo.jpg" alt="Lector de Códigos de Barras">
+                    <h4>Lector de Códigos de Barras</h4>
+                    <p>Lectura rápida y precisa para inventarios.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20lector%20de%20códigos%20de%20barras." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-impresora-etiquetas.jpg" alt="Impresora de Etiquetas">
+                    <h4>Impresora de Etiquetas</h4>
+                    <p>Impresión de etiquetas para productos y logística.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20la%20impresora%20de%20etiquetas." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+            </div>
+        </section>
+        <!-- Cableado Estructurado y Redes -->
+        <section class="catalog-section">
+            <h2 class="catalog-section-title">Cableado Estructurado y Redes</h2>
+            <div class="catalog-products-grid">
+                <div class="catalog-product-card">
+                    <img src="img/producto-patchpanel.jpg" alt="Patch Panel">
+                    <h4>Patch Panel</h4>
+                    <p>Organización y gestión de cableado de red.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20patch%20panel." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-switch.jpg" alt="Switch de Red">
+                    <h4>Switch de Red</h4>
+                    <p>Conectividad eficiente para múltiples dispositivos.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20switch%20de%20red." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+                <div class="catalog-product-card">
+                    <img src="img/producto-rack.jpg" alt="Rack de Comunicaciones">
+                    <h4>Rack de Comunicaciones</h4>
+                    <p>Almacenamiento y organización de equipos de red.</p>
+                    <a href="https://wa.me/573005874684?text=Hola,%20me%20interesa%20el%20rack%20de%20comunicaciones." class="btn-whatsapp-product" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+                </div>
+            </div>
+        </section>
+        <div style="text-align:center;">
+            <a href="index.html" class="catalog-back-btn"><i class="fas fa-arrow-left"></i> Volver a la página principal</a>
+        </div>
+    </main>
+    <footer class="main-footer" style="margin-top: 60px;">
+        <div class="container" style="text-align:center; padding: 32px 0;">
+            <div class="footer-socios" style="margin-bottom: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; align-items: center;">
+                <img src="asset/img/socios/epson.svg" alt="Epson" style="height:38px; max-width:90px;">
+                <img src="asset/img/socios/hp.svg" alt="HP" style="height:38px; max-width:90px;">
+                <img src="asset/img/socios/imou.svg" alt="Imou" style="height:38px; max-width:90px;">
+                <img src="asset/img/socios/lg.svg" alt="LG" style="height:38px; max-width:90px;">
+                <img src="asset/img/socios/samsung.svg" alt="Samsung" style="height:38px; max-width:90px;">
+                <img src="asset/img/socios/zebratechnologies.svg" alt="Zebra Technologies" style="height:38px; max-width:110px;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span style="font-weight:800; color:var(--primary-blue); font-size:1.1rem;">CE ASE INGENIERIA</span>
+            </div>
+            <div style="margin-bottom: 8px; color:var(--footer-text);">
+                <i class="fas fa-phone-alt"></i> 601-2520044 &nbsp;|&nbsp;
+                <i class="fab fa-whatsapp"></i> 3005874684 &nbsp;|&nbsp;
+                <i class="fas fa-envelope"></i> comercial@ceaseingenieria.com
+            </div>
+            <div style="color:var(--footer-text); font-size:0.95rem;">
+                © 2024 CE ASE INGENIERIA. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
