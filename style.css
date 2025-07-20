@@ -543,10 +543,10 @@ a:hover {
 .hero-section {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, #1e40af 100%);
     color: var(--white);
-    padding: 120px 0 100px;
+    padding: 60px 0 80px;
     position: relative;
     overflow: hidden;
-    min-height: 80vh;
+    min-height: calc(100vh - 72px);
     display: flex;
     align-items: center;
 }
@@ -607,14 +607,16 @@ a:hover {
     z-index: 4;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .hero-text {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero-title {
@@ -656,7 +658,7 @@ a:hover {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     animation: fadeInUp 1s ease 0.8s both;
 }
 
@@ -1610,8 +1612,8 @@ a:hover {
         font-size: 0.75rem;
     }
     .hero-section {
-        padding: 80px 0 60px;
-        min-height: 70vh;
+        padding: 60px 0 40px;
+        min-height: calc(100vh - 120px);
         background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, #1e40af 100%);
     }
     
@@ -1691,6 +1693,8 @@ a:hover {
     }
     .hero-section {
         background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, #1e40af 100%);
+        min-height: calc(100vh - 100px);
+        padding: 40px 0;
     }
     .hero-video {
         display: none;
@@ -1744,6 +1748,17 @@ a:hover {
 }
 
 @media (max-width: 600px) {
+    .hero-section {
+        min-height: calc(100vh - 80px);
+        padding: 30px 0;
+    }
+    .hero-content {
+        gap: 30px;
+    }
+    .hero-buttons {
+        margin-bottom: 2rem;
+        gap: 15px;
+    }
     .contact-actions {
         padding: 20px 8px;
         text-align: center;
